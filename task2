@@ -1,0 +1,20 @@
+def chatbot_response(user_input):
+    user_input = user_input.lower() 
+    if user_input == "hello":
+        return "Hey!"
+    elif user_input == "how are you":
+        return "I'm fine, thanks!"
+    elif user_input == "bye":
+        return "Goodbye!"
+    else:
+        return "Sorry, I don't understand."
+print("Chatbot is running (type 'bye' to exit)")
+
+while True:
+    user_text = input("You: ")
+
+    reply = chatbot_response(user_text)
+    print("Bot:", reply)
+
+    if user_text.lower() == "bye":
+        break
